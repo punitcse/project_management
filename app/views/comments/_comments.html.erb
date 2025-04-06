@@ -1,0 +1,6 @@
+<%= render "comments/new", comment: Comment.new, project: project %>
+
+<hr>
+<%= turbo_frame_tag "comments" do %>
+    <%= render comments %>
+<% end %>

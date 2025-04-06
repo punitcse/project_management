@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @project %>
+
+<div class="row">
+  <%= link_to "Edit", edit_project_path(@project) %> |
+  <%= link_to "Back to projects", projects_path %>
+</div>
+<p></p>
+
+<%= render 'comments/comments', comments: @project.comments, project: @project %>
+

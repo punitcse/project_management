@@ -1,5 +1,6 @@
 # README
 
+Keep track of Project conversation history.
 
 # Getting Started
 This README would normally document whatever steps are necessary to get the
@@ -24,6 +25,21 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+1.Install Postgres version 14.13. Following this guide https://www.dataquest.io/blog/install-postgresql-14-7-for-macos/
+```bash
+brew install postgresql@14 
+```
+
+2.Create database
+```bash
+bin/rails db:create
+```
+
+3. Migrate database and run seed 
+```bash
+
+```
 
 ## Original Requirements
 Use Ruby on Rails to build a project conversation history. A user should be able to:
@@ -67,12 +83,11 @@ Or Will there be different types of users who access different authorisation of 
 
 **Answer** It is not needed for the time being once we add login system this can be done.
 
-**Punit** How do we add projects to system? 
+**Punit** Do we need a limit on how long the comment could be? Also do we need a profanity check?
 
-**Answer** I will just give you a csv file with project name.
+**Answer**  Max 2000 characters. Profanity check not needed, good idea to add it later though.
 
-
-**Punit** What will be different project status?
+**Punit** What will be different project status? 
 
 **Answer** It will be pending, in progress, on hold, completed.
 
@@ -80,12 +95,14 @@ Or Will there be different types of users who access different authorisation of 
 
 **Answer** No it should just look presentable.
 
+**Punit** Do we want project created and updated? 
+**Answer** Yes, it would be nice, but dont need to show activity for that now.
 
 **Punit**  Let me just reiterate everything I understand and please correct me or add anything you find necessary.
 We want to build a project management system which has following capabilities:
-1. User can go to website they see a list of projects. 
+1. User can go to website they see list of projects. 
 2. Click on any project which show project name, description and current status.
-3. By default, the initial status will be pending. But user can change it to in progress, on hold or completed.
+3. By default, the initial status will be pending. But user can change it to in progress, on hold or completed. They also have capability to update other field in the same form.
 4. User can also add a comment by adding their name and comment on the same project page.
 5. We show activity of project, when status is changed.
 6. Also list comments so recent comment shown first with their name. They cant edit or delete once comment is added.
