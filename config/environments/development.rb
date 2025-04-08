@@ -1,5 +1,11 @@
 require "active_support/core_ext/integer/time"
 
+begin
+  require 'debug/prelude'
+rescue LoadError
+  # Skip if not available (e.g., on Render)
+end
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
