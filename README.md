@@ -3,28 +3,6 @@
 Keep track of Project conversation history.
 
 # Getting Started
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 1.Install Postgres version 14.13. Following this guide https://www.dataquest.io/blog/install-postgresql-14-7-for-macos/
 ```bash
@@ -36,7 +14,7 @@ brew install postgresql@14
 bin/rails db:create
 ```
 
-3. Migrate database 
+3.Migrate database 
 ```bash
 bin/rails db:migrate
 ```
@@ -44,6 +22,10 @@ bin/rails db:migrate
 4.Start application server and visit http://localhost:3000/
 ```bash
 bin/rails s
+```
+5. To run tests
+```bash
+rspec spec
 ```
 You can create a new project from here or create a new one. You can also update the existing project.
 It wil be shown in the activities on Projects page. you can also add comments and that will show on the same projects page.
@@ -130,3 +112,13 @@ We want to build a project management system which has the following capabilitie
 3. Design is very basic that is done in order to just show it in presentable form. But could have done better.
 4. Activity can be added for other actions like when it is created etc..
 5. Login and authorisation can be added so we can decide who has access to what.
+
+Some screenshots for running app
+
+
+![projects.png](projects.png)
+
+
+![show.png](show.png)
+
+![update_project.png](update_project.png)
