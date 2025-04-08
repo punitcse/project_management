@@ -36,10 +36,19 @@ brew install postgresql@14
 bin/rails db:create
 ```
 
-3. Migrate database and run seed 
+3. Migrate database 
 ```bash
-
+bin/rails db:migrate
 ```
+
+4.Start application server and visit http://localhost:3000/
+```bash
+bin/rails s
+```
+You can create a new project from here or create a new one. You can also update the existing project.
+It wil be shown in the activities on Projects page. you can also add comments and that will show on the same projects page.
+
+Here is the link for deployed link https://project-management-4vnm.onrender.com/
 
 ## Original Requirements
 Use Ruby on Rails to build a project conversation history. A user should be able to:
@@ -113,11 +122,11 @@ We want to build a project management system which has the following capabilitie
 
 **Answer** No all good let me. Thanks.
 
-**Punit:** I will add some more improvements in this project if I dont have time constraints which are:
+<h2>Did not implement due to time constraints</h2>
+
+**Improvements for future version:** I will add some more improvements in this project if I dont have time constraints which are:
 1. Scalability could be an issue if we have large number of comments/activities. I will Add pagination for comments and activities.
 2. I have added rspec tests, but I will add more tests to cover all scenarios and some system tests.
 3. Design is very basic that is done in order to just show it in presentable form. But could have done better.
 4. Activity can be added for other actions like when it is created etc..
 5. Login and authorisation can be added so we can decide who has access to what.
-
-

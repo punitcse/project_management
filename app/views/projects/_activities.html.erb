@@ -1,15 +1,17 @@
-<div class="border">
-  <h3>Activities</h3>
-<% activities.each do |activity| %>
-  <% activity.details&.each do |field, (old_value, new_value)| %>
-    <div class="row">
-      <p>
-        <small><%= distance_of_time_in_words_to_now activity.created_at %> ago</small>
-      <p>
-        <strong><%= field.humanize %></strong> changed from "<%= old_value %>" to "<%= new_value %>"
-      </p>
-    </div>
+<div class="border px-2">
+  <% if activities.present? %>
+    <h3>Activities</h3>
+    <% activities.each do |activity| %>
+      <% activity.details&.each do |field, (old_value, new_value)| %>
+        <div class="row">
+          <p>
+            <small><%= distance_of_time_in_words_to_now activity.created_at %> ago</small>
+          <p>
+            <strong><%= field.humanize %></strong> changed from "<%= old_value %>" to "<%= new_value %>"
+          </p>
+        </div>
+      <% end %>
+    <% end %>
   <% end %>
-<% end %>
 </div>
 <p></p>

@@ -2,6 +2,9 @@
 
 <hr>
 <%= turbo_frame_tag "comments" do %>
-    Comments
+    <% if comments.present? %>
     <%= render comments %>
+    <% else %>
+      No comments yet.
+    <% end %>
 <% end %>
