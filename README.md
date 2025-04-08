@@ -96,11 +96,11 @@ Or Will there be different types of users who access different authorisation of 
 **Answer** No it should just look presentable.
 
 **Punit** Do we want project created and updated? 
-**Answer** Yes, it would be nice, but dont need to show activity for that now.
+**Answer** Yes, it would be nice, but don't need to show activity for that now.
 
 **Punit**  Let me just reiterate everything I understand and please correct me or add anything you find necessary.
-We want to build a project management system which has following capabilities:
-1. User can go to website they see list of projects. 
+We want to build a project management system which has the following capabilities:
+1. User can go to website they see list of projects.  
 2. Click on any project which show project name, description and current status.
 3. By default, the initial status will be pending. But user can change it to in progress, on hold or completed. They also have capability to update other field in the same form.
 4. User can also add a comment by adding their name and comment on the same project page.
@@ -112,3 +112,12 @@ We want to build a project management system which has following capabilities:
 **Punit** Anything else you want to add or change?
 
 **Answer** No all good let me. Thanks.
+
+**Punit:** I will add some more improvements in this project if I dont have time constraints which are:
+1. Scalability could be an issue if we have large number of comments/activities. I will Add pagination for comments and activities.
+2. I have added rspec tests, but I will add more tests to cover all scenarios and some system tests.
+3. Design is very basic that is done in order to just show it in presentable form. But could have done better.
+4. Activity can be added for other actions like when it is created etc..
+5. Login and authorisation can be added so we can decide who has access to what.
+
+

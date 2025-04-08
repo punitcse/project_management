@@ -1,12 +1,11 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: %i[ show edit update destroy ]
+  before_action :set_project_and_activities, only: %i[ show edit update destroy ]
 
   def index
     @projects = Project.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @project = Project.new
@@ -48,8 +47,9 @@ class ProjectsController < ApplicationController
   end
 
   private
-    def set_project
+    def set_project_and_activities
       @project = Project.find(params.expect(:id))
+      @activities = @project.activities.order(created_at: :desc)
     end
 
     def project_params

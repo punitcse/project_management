@@ -3,10 +3,13 @@
 <%= render @project %>
 
 <div class="row">
-  <%= link_to "Edit", edit_project_path(@project) %> |
-  <%= link_to "Back to projects", projects_path %>
+  <%= link_to "Edit", edit_project_path(@project) %> | <%= link_to "Back to projects", projects_path %>
 </div>
 <p></p>
+</hr>
 
+<%= render 'activities', activities: @activities %>
+
+</hr>
 <%= render 'comments/comments', comments: @project.comments, project: @project %>
 
