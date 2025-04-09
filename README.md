@@ -32,6 +32,8 @@ It wil be shown in the activities on Projects page. you can also add comments an
 
 Here is the link for deployed link https://project-management-4vnm.onrender.com/
 
+**UPDATE** Site could be slow because onrender shut down resources temporarily if they are not used. Just wait a few mins and it will be there.
+
 ## Original Requirements
 Use Ruby on Rails to build a project conversation history. A user should be able to:
 
